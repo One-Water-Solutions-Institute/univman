@@ -1,0 +1,213 @@
+
+For soybeen -> wwht -> corn rotation                                                       
+16
+
+NAME                       CONDS      ALTS       ACTS
+irr_2007                       9         2          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1   A2
+ year_cal         hru          0                 null                -        2007                 =    =
+ irr_year         hru          0                 null                -         500                 <    < 
+ plant_name_gro   hru          0                 soyb                -           0                 =    - 
+ jday             hru          0                 null                -         177                 >    - 
+ jday             hru          0                 null                -         258                 <    -
+ plant_name_gro   hru          0                 wwht                -           0                 -    =
+ jday             hru          0                 null                -         271                 -    >
+ jday             hru          0                 null                -         365                 -    <
+ w_stress         hru          0                 null                -         0.8                 <    <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y    y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2008                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2008                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 wwht                -           0                 =
+ jday             hru          0                 null                -           1                 >
+ jday             hru          0                 null                -         165                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2009                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2009                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 corn                -           0                 =
+ jday             hru          0                 null                -         125                 >
+ jday             hru          0                 null                -         270                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2010                       9         2          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1   A2
+ year_cal         hru          0                 null                -        2010                 =    =
+ irr_year         hru          0                 null                -         500                 <    < 
+ plant_name_gro   hru          0                 soyb                -           0                 =    - 
+ jday             hru          0                 null                -         177                 >    - 
+ jday             hru          0                 null                -         258                 <    -
+ plant_name_gro   hru          0                 wwht                -           0                 -    =
+ jday             hru          0                 null                -         271                 -    >
+ jday             hru          0                 null                -         365                 -    <
+ w_stress         hru          0                 null                -         0.8                 <    <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y    y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2011                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2011                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 wwht                -           0                 =
+ jday             hru          0                 null                -           1                 >
+ jday             hru          0                 null                -         165                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2012                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2012                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 corn                -           0                 =
+ jday             hru          0                 null                -         125                 >
+ jday             hru          0                 null                -         270                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2013                       9         2          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1   A2
+ year_cal         hru          0                 null                -        2013                 =    =
+ irr_year         hru          0                 null                -         500                 <    < 
+ plant_name_gro   hru          0                 soyb                -           0                 =    - 
+ jday             hru          0                 null                -         177                 >    - 
+ jday             hru          0                 null                -         258                 <    -
+ plant_name_gro   hru          0                 wwht                -           0                 -    =
+ jday             hru          0                 null                -         271                 -    >
+ jday             hru          0                 null                -         365                 -    <
+ w_stress         hru          0                 null                -         0.8                 <    <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y    y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2014                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2014                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 wwht                -           0                 =
+ jday             hru          0                 null                -           1                 >
+ jday             hru          0                 null                -         165                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2015                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2015                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 corn                -           0                 =
+ jday             hru          0                 null                -         125                 >
+ jday             hru          0                 null                -         270                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2016                       9         2          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1   A2
+ year_cal         hru          0                 null                -        2016                 =    =
+ irr_year         hru          0                 null                -         500                 <    < 
+ plant_name_gro   hru          0                 soyb                -           0                 =    - 
+ jday             hru          0                 null                -         177                 >    - 
+ jday             hru          0                 null                -         258                 <    -
+ plant_name_gro   hru          0                 wwht                -           0                 -    =
+ jday             hru          0                 null                -         271                 -    >
+ jday             hru          0                 null                -         365                 -    <
+ w_stress         hru          0                 null                -         0.8                 <    <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y    y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2017                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2017                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 wwht                -           0                 =
+ jday             hru          0                 null                -           1                 >
+ jday             hru          0                 null                -         165                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2018                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2018                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 corn                -           0                 =
+ jday             hru          0                 null                -         125                 >
+ jday             hru          0                 null                -         270                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2019                       9         2          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1   A2
+ year_cal         hru          0                 null                -        2019                 =    =
+ irr_year         hru          0                 null                -         500                 <    < 
+ plant_name_gro   hru          0                 soyb                -           0                 =    - 
+ jday             hru          0                 null                -         177                 >    - 
+ jday             hru          0                 null                -         258                 <    -
+ plant_name_gro   hru          0                 wwht                -           0                 -    =
+ jday             hru          0                 null                -         271                 -    >
+ jday             hru          0                 null                -         365                 -    <
+ w_stress         hru          0                 null                -         0.8                 <    <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y    y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2020                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2020                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 wwht                -           0                 =
+ jday             hru          0                 null                -           1                 >
+ jday             hru          0                 null                -         165                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2021                       6         1          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1
+ year_cal         hru          0                 null                -        2021                 =
+ irr_year         hru          0                 null                -         500                 <
+ plant_name_gro   hru          0                 corn                -           0                 =
+ jday             hru          0                 null                -         125                 >
+ jday             hru          0                 null                -         270                 <
+ w_stress         hru          0                 null                -         0.8                 <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y
+
+NAME                       CONDS      ALTS       ACTS
+irr_2022                       9         2          1
+VAR               OBJ    OBJ_NUM              LIM_VAR           LIM_OP   LIM_CONST                A1   A2
+ year_cal         hru          0                 null                -        2022                 =    =
+ irr_year         hru          0                 null                -         500                 <    < 
+ plant_name_gro   hru          0                 soyb                -           0                 =    - 
+ jday             hru          0                 null                -         177                 >    - 
+ jday             hru          0                 null                -         258                 <    -
+ plant_name_gro   hru          0                 wwht                -           0                 -    =
+ jday             hru          0                 null                -         271                 -    >
+ jday             hru          0                 null                -         365                 -    <
+ w_stress         hru          0                 null                -         0.8                 <    <
+ACT_TYP           OBJ    OBJ_NUM                 NAME           OPTION       CONST   CONST2    FP  OUTCOMES
+ irrigate         hru          0        sprinkler_med    sprinkler_med          38       99  null  y    y
