@@ -79,6 +79,7 @@ public class UniManagement {
    * @return
    * @throws Exception
    */
+  @SuppressWarnings("unchecked")
   public static List<UniManagement> from(String s) throws Exception {
     Object json = new JSONParser().parse(s);
     List<Map> mans = null;
