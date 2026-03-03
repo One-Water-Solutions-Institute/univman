@@ -1,0 +1,157 @@
+[
+    {
+        "name": "Corn-Soybean CT",
+        "until_end_of": 2015,
+        "events": [
+            {
+                "date": "0000-05-01",
+                "name": "Disk, tandem secondary",
+                "type": "op-tillage",
+                "op_id": 22975
+            },
+            {
+                "date": "0000-05-03",
+                "name": "Cultivator, field 6-12 in sweeps",
+                "type": "op-tillage",
+                "op_id": 22959
+            },
+            {
+                "date": "0000-05-03",
+                "name": "Fert applic. shank low disturb, 15 in spacing",
+                "type": "op-amendment-fertilizer",
+                "op_id": 22691,
+                "min_n_lbs_ac": 70,
+                "min_p_lbs_ac": 30
+            },
+            {
+                "date": "0000-05-05",
+                "op_id": 22922,
+                "name": "Planter, double disk opnr",
+                "type": "op-plant",
+                "crop_id": 763,
+                "crop_name": "Corn, grain, seed"
+            },
+            {
+                "date": "0000-06-02",
+                "name": "Fert applic. surface broadcast",
+                "type": "op-amendment-fertilizer",
+                "op_id": 22693,
+                "min_n_lbs_ac": 125,
+                "min_p_lbs_ac": 0
+            },
+            {
+                "date": "0000-10-07",
+                "name": "Harvest, killing crop 50pct standing stubble",
+                "type": "op-harvest",
+                "crop_id": 763,
+                "op_id": 22822
+            },
+            {
+                "date": "0000-10-09",
+                "name": "Chisel, st. pt",
+                "type": "op-tillage",
+                "op_id": 23059
+            },
+            {
+                "date": "0001-05-10",
+                "name": "Disk, tandem secondary",
+                "type": "op-tillage",
+                "op_id": 22975
+            },
+            {
+                "date": "0001-05-12",
+                "name": "Fert applic. shank low disturb, 15 in spacing",
+                "type": "op-amendment-fertilizer",
+                "op_id": 22691,
+                "min_n_lbs_ac": 10,
+                "min_p_lbs_ac": 30
+            },
+            {
+                "date": "0001-05-13",
+                "name": "Cultivator, field 6-12 in sweeps",
+                "type": "op-tillage",
+                "op_id": 22959
+            },
+            {
+                "date": "0001-05-15",
+                "op_id": 22922,
+                "name": "Planter, double disk opnr",
+                "type": "op-plant",
+                "crop_id": 827,
+                "crop_name": "Corn, grain, seed"
+            },
+            {
+                "date": "0001-10-07",
+                "name": "Harvest, killing crop 50pct standing stubble",
+                "type": "op-harvest",
+                "crop_id": 827,
+                "op_id": 22822
+            },
+            {
+                "date": "0001-10-09",
+                "name": "Chisel, st. pt",
+                "type": "op-tillage",
+                "op_id": 23059
+            }
+        ]
+    },
+    {
+        "name": "Corn-Soybean NT",
+        "events": [
+            {
+                "date": "0000-05-03",
+                "name": "Fert applic. shank low disturb, 15 in spacing",
+                "type": "op-amendment-fertilizer",
+                "op_id": 22691,
+                "min_n_lbs_ac": 70,
+                "min_p_lbs_ac": 30
+            },
+            {
+                "date": "0000-05-05",
+                "op_id": 22922,
+                "name": "Planter, double disk opnr",
+                "type": "op-plant",
+                "crop_id": 763,
+                "crop_name": "Corn, grain, seed"
+            },
+            {
+                "date": "0000-06-02",
+                "name": "Fert applic. surface broadcast",
+                "type": "op-amendment-fertilizer",
+                "op_id": 22693,
+                "min_n_lbs_ac": 125,
+                "min_p_lbs_ac": 0
+            },
+            {
+                "date": "0000-10-07",
+                "name": "Harvest, killing crop 50pct standing stubble",
+                "type": "op-harvest",
+                "crop_id": 763,
+                "op_id": 22822
+            },
+            {
+                "date": "0001-05-12",
+                "name": "Fert applic. shank low disturb, 15 in spacing",
+                "type": "op-amendment-fertilizer",
+                "op_id": 22691,
+                "min_n_lbs_ac": 10,
+                "min_p_lbs_ac": 30
+            },
+            {
+                "date": "0001-05-15",
+                "op_id": 22922,
+                "name": "Planter, double disk opnr",
+                "type": "op-plant",
+                "crop_id": 827,
+                "crop_name": "Corn, grain, seed"
+            },
+            {
+                "date": "0001-09-30",
+                "name": "Harvest, killing crop 50pct standing stubble",
+                "type": "op-harvest",
+                "crop_id": 827,
+                "op_id": 22822
+            }
+        ]
+    }
+]
