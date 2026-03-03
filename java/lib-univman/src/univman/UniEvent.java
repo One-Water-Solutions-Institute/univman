@@ -186,13 +186,10 @@ public class UniEvent {
     String d = (String) evMap.get(KEY_DATE);
     name = (String) evMap.get(KEY_NAME);
     typename = (String) evMap.get(KEY_TYPE);
-//    opId = (Long) evMap.get(KEY_OPID);
 
     typename = typename.replace('-', '_').toLowerCase().trim();
     if (typename == null)
       throw new IllegalArgumentException("Missing 'type'");
-//    if (opId == null)
-//      throw new IllegalArgumentException("Missing 'op_id'");
 
     if (d == null)
       throw new IllegalArgumentException("Missing 'date'");
