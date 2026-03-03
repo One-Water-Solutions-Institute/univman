@@ -35,6 +35,23 @@ public class UniManagement {
   int year;
   List<UniEvent> events;
 
+  /**
+   *
+   * @param name
+   * @param year
+   * @param events
+   */
+  private UniManagement(String name, int year, List<UniEvent> events) {
+    if (year != -1 && year < 1900)
+      throw new IllegalArgumentException("invalid year: " + year);
+
+    this.name = name;
+    this.events = events;
+    this.year = year;
+
+    UniEvent.sortByDate(events);
+  }
+
   public int getYear() {
     return year;
   }
@@ -43,6 +60,39 @@ public class UniManagement {
     this.year = year;
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public List<UniEvent> getEvents() {
+    return events;
+  }
+
+  public List<UniEvent> getClonedEvents() {
+    List<UniEvent> cl = new ArrayList<>();
+    for (UniEvent ue : events) {
+      cl.add(ue.clone());
+    }
+    return cl;
+  }
+
+  int getSequenceLength() {
+    LocalDate last = events.get(events.size() - 1).getDate();
+    return last.getYear();
+  }
+
+  @Override
+  public String toString() {
+    StringBuffer b = new StringBuffer();
+    b.append(getName()).append(" ").append(" --> \n");
+    for (UniEvent e : events) {
+      b.append("   ").append(e.toString()).append("\n");
+    }
+    return b.toString();
+  }
+
+  ///// static methods 
+  
   /**
    *
    * @param file
@@ -111,39 +161,6 @@ public class UniManagement {
       um.add(new UniManagement(name, until.intValue(), uevents));
     }
     return um;
-  }
-
-  /**
-   *
-   * @param name
-   * @param year
-   * @param events
-   */
-  UniManagement(String name, int year, List<UniEvent> events) {
-    if (year != -1 && year < 1900)
-      throw new IllegalArgumentException("invalid year: " + year);
-
-    this.name = name;
-    this.events = events;
-    this.year = year;
-
-    UniEvent.sortByDate(events);
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public List<UniEvent> getEvents() {
-    return events;
-  }
-
-  public List<UniEvent> getClonedEvents() {
-    List<UniEvent> cl = new ArrayList<>();
-    for (UniEvent ue : events) {
-      cl.add(ue.clone());
-    }
-    return cl;
   }
 
   /**
@@ -236,20 +253,5 @@ public class UniManagement {
     UniEvent.checkEventDates(sequence, start, end);
 
     return sequence;
-  }
-
-  int getSequenceLength() {
-    LocalDate last = events.get(events.size() - 1).getDate();
-    return last.getYear();
-  }
-
-  @Override
-  public String toString() {
-    StringBuffer b = new StringBuffer();
-    b.append(getName()).append(" ").append(" --> \n");
-    for (UniEvent e : events) {
-      b.append("   ").append(e.toString()).append("\n");
-    }
-    return b.toString();
   }
 }
