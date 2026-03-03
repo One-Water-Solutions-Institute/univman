@@ -43,8 +43,8 @@ The universal management operation object contains a series of events representi
                 "events": [
                   {
                     "date": "0000-05-05",
-                    "name": "Planter, double disk opnr",
                     "type": "op-plant",
+                    "name": "Planter, double disk opnr",
                     "op_id": 22922,
                     // ...
                   },
@@ -180,8 +180,8 @@ Example:            .. code-block::  json
 
                      {
                         "date": "0000-05-05",
-                        "name": "Planter, double disk opnr",
                         "type": "op-plant",
+                        "name": "Planter, double disk opnr",
                         "op_id": 22922,
                         // ...
                       }
@@ -190,8 +190,8 @@ Example:            .. code-block::  json
 
                       {
                         "date": "2020-04-15",
-                        "name": "Planter, double disk opnr",
                         "type": "op-plant",
+                        "name": "Planter, double disk opnr",
                         "op_id": 22922,
                         // ...
                       }
@@ -238,8 +238,8 @@ Example:          .. code-block::  json
 
                       {
                         "date": "0000-10-07",
-                        "name": "Harvest, killing crop 50pct standing stubble",
                         "type": "op-harvest",
+                        "name": "Harvest, killing crop 50pct standing stubble",
                         "op_id": 22822,
                         "crop_name": "Corn",
                         "crop_id": 763
@@ -267,8 +267,8 @@ Example:          .. code-block::  json
 
                       {
                         "date": "0000-10-07",
-                        "name": "Harvest, killing crop 50pct standing stubble",
                         "type": "op-harvest",
+                        "name": "Harvest, killing crop 50pct standing stubble",
                         "op_id": 22822,
                         "crop_name": "Corn",
                         "crop_id": 763
@@ -417,21 +417,21 @@ Example:              .. code-block::  json
 
                           {
                             "date": "0000-06-02",
-                            "name": "Fert applic. surface broadcast",
                             "type": "op-amendment-fertilizer",
+                            "name": "Fert applic. surface broadcast",
                             "op_id": 22693,
                             "min_n_lbs_ac": 125,
                             "min_p_lbs_ac": 0
                           }
 
-                          // – o r–
+                          // – or –
 
                           {
                             "date": "0000-06-02",
-                            "name": "Fert applic. surface broadcast",
                             "type": "op-amendment-fertilizer",
+                            "name": "Fert applic. surface broadcast",
                             "op_id": 22693,
-                            "fert_name": “sw_da_sl”,
+                            "fert_name": "sw_da_sl",
                             "fert_amt_ac": 200
                           }
 
@@ -442,7 +442,208 @@ Notes:                * The service will error out if the provided date values a
 ====================  ============================================================
 
 
-...
+Event type: ``op-amendment-pesticide``
+--------------------------------------
+
+
+================  ============================================================
+Type:             ``"op-amendment-pesticide"``
+Description:      Describes pesticide application.
+Fields:
+ ``"crop_id"``     The crop being killed after pesticide application, *(required)*
+ ``"crop_name"``   The crop name, *(optional)*
+Example:          .. code-block::  json
+
+                     {
+                        "date": "0000-05-03",
+                        "type": "op-amendment-pesticide",
+                        "name": "Sprayer, kill cover in growing crop",
+                        "op_id": 22719,
+                        "crop_id": 768,
+                        "crop_name": "Cover crop, annual, legume"
+                     }
+
+Notes:             *  The service will error out if the provided date values are not
+                      in range, are invalid, or specify an invalid period.
+                   *  If the domain table indicates that the op kills the crop. The a kill
+                      event is generated for the crop specified with crop_id
+================  ============================================================
+
+
+Event type: ``op-tillage``
+--------------------------
+
+================  ============================================================
+Type:             ``"op-tillage"``
+Description:      Describes a tillage operation.
+Fields:
+ ``"crop_id"``    The crop being killed after tilling, required if the
+                  operation’s ``‘kill_crop’`` in the domain table flag is set to true.
+                  Otherwise it is ignored.
+ ``"crop_name"``   The crop name, *(optional)*
+Example:          .. code-block::  json
+
+                     {
+                        "date": "0000-05-03",
+                        "type": "op-tillage",
+                        "name": "Cultivator, field 6-12 in sweeps",
+                        "op_id": 22959,
+                        "crop_id": 763
+                    }
+
+
+Notes:             *  The service will error out if the provided date values are not
+                      in range, are invalid, or specify an invalid period.
+================  ============================================================
+
+
+Event type: ``op-burn``
+-----------------------
+
+================  ============================================================
+Type:             ``"op-burn"``
+Description:      Describes a burning operation.
+Fields:
+ ``"crop_id"``    The crop being burned. *(required)*
+ ``"crop_name"``   The crop name. *(optional)*
+Example:          .. code-block::  json
+
+                   {
+                    "date": "0000-05-03",
+                    "type": "op-burn",
+                    "name": "Burn residue, high intensity",
+                    "op_id": 22848,
+                    "crop_id": 763
+                   }
+
+
+Notes:             *  The service will error out if the provided date values are not
+                      in range, are invalid, or specify an invalid period.
+================  ============================================================
+
+
+
+Event type: ``op-graze``
+-------------------------
+
+================  ============================================================
+Type:             ``"op-graze"``
+Description:      Describes a grazing operation.
+Fields:
+ ``"crop_id"``    The crop being grazed. *(required)*
+ ``"crop_name"``   The crop name. *(optional)*
+Example:          .. code-block::  json
+
+                   {
+                      "date": "0000-05-03",
+                      "type": "op-graze",
+                      "name": "Graze, stubble or residue 25 pct",
+                      "op_id": 22779,
+                      "crop_id": 763
+                      "crop_name": "popcorn"
+                    }
+
+
+
+Notes:             *  The service will error out if the provided date values are not
+                      in range, are invalid, or specify an invalid period.
+================  ============================================================
+
+
+
+Event type: ``op-irrigation-allocation``
+----------------------------------------
+
+======================  ============================================================
+Type:                   ``"op-irrigation-allocation"``
+Description:            Provides the total annual water allocation available for irrigation.
+Fields:
+ ``"irr_amt_year_in"``  Total irrigation amount in inches for that year. *(required)*
+Example:                .. code-block::  json
+
+                          {
+                            "date": "2022-01-01",
+                            "type": "op-irrigation-allocation",
+                            "irr_amt_year_in": 50,
+                            "name": "Annual water allocation"
+                          }
+
+
+Notes:                  * The service will error out if the provided date values are not
+                          in range, are invalid, or specify an invalid period.
+                        * This is the available irrigation water for the year in inches
+                        * Only the date’s year is relevant
+======================  ============================================================
+
+
+The ``"op-irrigation-allocation"`` event is needed once a year to describe the allocated amount of water available for irrigation for the entire year. Multiple ``"op-irrigation-allocation"``
+events per year are not allowed. An ``"op-irrigation-allocation"`` event is required if a crop is irrigated. Here, the ``"op-irrigation-allocation"`` event must be present in the same year as the  ``"op-plant"`` when ``"irr" : true``.
+
+If the crop is a winter crop or a perennial, there needs to be an  ``"op-irrigation-allocation"`` event for each calendar year during the cropping period until ``"op-harvest"``. If no water allocation is provided, but the crop is irrigated, the service will fail with an error.
+
+*Example 1:* Irrigated summer crop
+
+.. code-block::  json
+
+    // ...
+    },
+    {
+      "date": "2022-01-01",
+      "type": "op-irrigation-allocation",
+      "irr_amt_year_in": 50,
+    },
+    {
+      "date": "2022-04-15",
+      "type": "op-plant",
+      "irr": true,
+      // ...
+    },
+    {
+      "date": "2022-10-01",
+      "type": "op-harvest",
+      // ...
+    },
+    // ...
+
+* The crop is planted in April 2022 and harvested in October the same year.
+* The water allocation for 2022 is 50 inches
+* The planting operation specifies that the crop gets irrigated.
+
+*Example 2:* Irrigated winter crop
+
+.. code-block::  json
+
+    // ...
+    },
+    {
+      "date": "2022-01-01",
+      "type": "op-irrigation-allocation",
+      "irr_amt_year_in": 30,
+    },
+    {
+      "date": "2022-10-15",
+      "type": "op-plant",
+      "irr": true,
+      // ...
+    },
+    {
+      "date": "2023-01-01",
+      "type": "op-irrigation-allocation",
+      "irr_amt_year_in": 20,
+    },
+    {
+      "date": "2023-05-20",
+      "type": "op-harvest",
+      // ...
+    },
+    // ...
+
+* The crop gets planted in October 2022 and harvested in May 2023. It is a Winter crop.
+* The October planting operation indicates that the crop is irrigated.
+* Therefore, water allocation has to be specified for 2022 (30 inches) and 2023 (20 inches).
+
+
+
 ---
 
 
